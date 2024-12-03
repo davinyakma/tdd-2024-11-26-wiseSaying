@@ -62,9 +62,8 @@ public class Main {
 
         System.out.println("출력 : " + output.toString());
 
-        //out 자원 해제
         try {
-            output.close(); //try-catch 예외 처리 해줘야함.
+            output.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
