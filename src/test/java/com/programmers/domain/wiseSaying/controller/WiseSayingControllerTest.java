@@ -69,7 +69,7 @@ public class WiseSayingControllerTest {
                 등록
                 나의 죽음을 적들에게 알리지 말라!
                 이순신
-                목록 
+                목록
                 """);
 
         assertThat(output)
