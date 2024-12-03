@@ -1,4 +1,4 @@
-package com.programmers.App;
+package com.programmers;
 
 import java.util.Scanner;
 

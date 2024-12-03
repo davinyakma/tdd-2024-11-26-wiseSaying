@@ -1,6 +1,5 @@
 package com.programmers;
 
-import com.programmers.App.App;
 import com.programmers.standard.util.TestUtil;
 
 import java.io.ByteArrayOutputStream;
