@@ -4,6 +4,8 @@ import com.programmers.AppTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class WiseSayingControllerTest {
@@ -37,7 +39,11 @@ public class WiseSayingControllerTest {
                 종료
                 """);
 
-        String[] split = output.split("명령\\) "); //'명령) '을 기준으로 split(나누면) 그룹이 4개가 생김.
+        System.out.println(
+                Arrays.toString(output.split("명령\\)"))
+        );
+
+        String[] split = output.split("명령\\)"); //'명령) '을 기준으로 split(나누면) 그룹이 4개가 생김.
         assertThat(split).hasSize(4);
     }
 }
