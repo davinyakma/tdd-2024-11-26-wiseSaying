@@ -22,19 +22,22 @@ public class App {
             System.out.print("명령) ");
             String cmd = scanner.nextLine();
 
-            // 삭제?id=3&name=홍길동&age=20 처럼 ?를 기준으로 왼쪽이 명령 오른쪽이 옵션임.
             String[] cmdBits = cmd.split("\\?");
             String actionName = cmdBits[0];
 
-            if("종료".equals(actionName)) {
-                systemController.actionExit();
-                break;
-            } else if ("등록".equals(actionName)) {
-                wiseSayingController.actionAdd();
-            } else if ("목록".equals(actionName)) {
-                wiseSayingController.actionList();
-            } else if ("삭제".equals(actionName)) {
-                wiseSayingController.actionDelete(cmd);
+            switch ( actionName ) {
+                case "종료":
+                    systemController.actionExit();
+                    return;
+                case "등록":
+                    wiseSayingController.actionAdd();
+                    break;
+                case "목록":
+                    wiseSayingController.actionList();
+                    break;
+                case "삭제":
+                    wiseSayingController.actionDelete(cmd);
+                    break;
             }
         }
     }
